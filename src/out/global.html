@@ -1,0 +1,4047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Global</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Global</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="bank2change%E9%93%B6%E8%A1%8C%E4%B8%AA%E4%BA%BA%E8%B5%84%E4%BA%A7%E8%BD%AC%E4%BA%A4%E6%98%93%E6%89%80"><span class="type-signature"></span>bank2change 银行个人资产转交易所<span class="signature">(name, changename, amount, type, priKey, host)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP用户名</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changename</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">交易所名称</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>amount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">数量</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">币种类</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>priKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">用户私钥</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line383">line 383</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    { broadcast: true, ..... }
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret = await api_cxp.bank2change('abc', 'exchang1', 1.1, 'BTC', '5KiTgpHdj3QZQmHtefRJDR5nnProKnBPt2icZBKkLF2vWqSTQez')</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="buy%E4%B9%B0%E5%85%A5%E9%99%90%E4%BB%B7%E5%A7%94%E6%89%98"><span class="type-signature"></span>buy 买入限价委托<span class="signature">(contractName, name, price, amount, orderId, priKey, exchangeName, host)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>contractName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP用户名</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>price</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">价格</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>amount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">数量</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>orderId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">委托编号，调用方定义， 全局唯一，10位数字</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>priKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">私钥</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>exchangeName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">交易所名称，比如 exchange1</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line498">line 498</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    { broadcast: true, ..... }
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret = await api_cxp.buy(  'ETH/BTC', 'sim', 0.003 , 1, 666606,  '5KiTgpHdj3QZQmHtefRJDR5nnProKnBPt2icZBKkLF2vWqSTQez', 'exchange1', host='http://testnet-bpb.coinxp.io:8888' )</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="cancel%E5%A7%94%E6%89%98%E6%92%A4%E9%94%80"><span class="type-signature"></span>cancel 委托撤销<span class="signature">(name, orderId, priKey, host)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP用户名</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>orderId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">原委托编号</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>priKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">私钥</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line616">line 616</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    { broadcast: true, ..... }
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret = await api_cxp.cancel('sim',  666606, '5KiTgpHdj3QZQmHtefRJDR5nnProKnBPt2icZBKkLF2vWqSTQez', host='http://testnet-bpb.coinxp.io:8888');</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="change2bank%E4%BA%A4%E6%98%93%E6%89%80%E4%B8%AA%E4%BA%BA%E8%B5%84%E4%BA%A7%E8%BD%AC%E9%93%B6%E8%A1%8C"><span class="type-signature"></span>change2bank 交易所个人资产转银行<span class="signature">(name, changename, amount, type, priKey, host)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP用户名</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changename</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">交易所名称</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>amount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">数量</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">类型</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>priKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">私钥</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line439">line 439</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    { broadcast: true, ..... }
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret = await api_cxp.change2bank('wm', 'exchang1', 1.1, 'BTC', '5KiTgpHdj3QZQmHtefRJDR5nnProKnBPt2icZBKkLF2vWqSTQez')</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="createAccount%E5%88%9B%E5%BB%BACXP%E7%94%A8%E6%88%B7"><span class="type-signature"></span>createAccount 创建CXP用户<span class="signature">(name, own_prikey, own_pubkey, active_pubkey, host)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">要创建的CXP用户名</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>own_prikey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">用户私钥,  公钥私钥由 genKeys 生成</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>own_pubkey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">用户公钥</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>active_pubkey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">用户 active 公钥</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址， 可选参数</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line76">line 76</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    { broadcast: true, ..... }
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret = await api_cxp.createAccount(newUser, PriKey, PubKey, PubKey, host='http://testnet-bpb.coinxp.io:8888'  )</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="genKeys%E7%94%9F%E6%88%90%E5%AF%86%E9%92%A5%E5%AF%B9"><span class="type-signature"></span>genKeys  生成密钥对<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line790">line 790</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret = await api_cxp.genKeys()</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getDeposits%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E7%9A%84%E5%85%85%E5%B8%81%E8%AE%B0%E5%BD%95"><span class="type-signature"></span>getDeposits 获取用户的充币记录<span class="signature">(coinName, startid, callback, host)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>coinName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">币种  比如 ETH</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>startid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">充值记录起始位置</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">回调函数</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line853">line 853</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    { rows:
+   [ { id: 0,
+       user: 'cxpkrvjtw',
+       from: '2N24Um3rWrzY8wKc6kKD1ouU8AmtUkx5ake',
+       quantity: '0.10000000 BTC',
+       txhash: '228ab72176c8da5f3ebfbc867de2b0965447be162e5b00833f170f4bc66db2a0',
+       timestamp: '1539134473116606504',
+       is_valid: 1,
+       validators: [Array] }, {...} ], more: false }
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret = await api_cxp.getDeposits('BTC', 0,  log,  host='http://testnet-bpb.coinxp.io:8888')</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getOrderbookbuy%E8%8E%B7%E5%8F%96%E4%BA%A4%E6%98%93%E5%AF%B9%E7%9A%84%E5%A7%94%E4%B9%B010%E6%A1%A3%E8%A1%8C%E6%83%85"><span class="type-signature"></span>getOrderbookbuy 获取交易对的委买 10 档行情<span class="signature">(contractName, host)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>contractName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">交易对名称</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line684">line 684</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    { bids:
+   [ { price: 0.034407, amount: 10.07 },
+     { price: 0.034545, amount: 13.35 },
+     { price: 0.034579, amount: 21.04 },
+     { price: 0.034614, amount: 83.26 },
+     { price: 0.034648, amount: 41.78 },
+     { price: 0.034682, amount: 10.38 },
+     { price: 0.034717, amount: 63.96 },
+     { price: 0.0994, amount: 20.38 },
+     { price: 0.0999, amount: 10.49 },
+     { price: 0.1005, amount: 10.88 } ] }
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret =  await  api_cxp.getOrderbookbuy('CXP/BTC')  </code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getOrderbooksell%E8%8E%B7%E5%8F%96%E4%BA%A4%E6%98%93%E5%AF%B9%E7%9A%84%E5%A7%94%E5%8D%96%E8%A1%8C%E6%83%85%EF%BC%8C10%E6%A1%A3"><span class="type-signature"></span>getOrderbooksell 获取交易对的委卖行情，10档<span class="signature">(contractName, host)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>contractName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">交易对名称</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line737">line 737</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    { bids:
+   [ { price: 0.034407, amount: 10.07 },
+     { price: 0.034545, amount: 13.35 },
+     { price: 0.034579, amount: 21.04 },
+     { price: 0.034614, amount: 83.26 },
+     { price: 0.034648, amount: 41.78 },
+     { price: 0.034682, amount: 10.38 },
+     { price: 0.034717, amount: 63.96 },
+     { price: 0.0994, amount: 20.38 },
+     { price: 0.0999, amount: 10.49 },
+     { price: 0.1005, amount: 10.88 } ] }
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret =  await  api_cxp.getOrderbooksell('CXP/BTC')</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getUserOrders%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E7%9A%84%E6%88%90%E4%BA%A4%E8%AE%B0%E5%BD%95"><span class="type-signature"></span>getUserOrders 获取用户的成交记录<span class="signature">(name, callback, host)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP用户名</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">回调函数</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line802">line 802</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    { rows:       
+    [{ request_id: 24199,
+       orderbook_key: 31680,
+       scope: '6222325301620244480',
+       currency_symbol: 1129595400,
+       commodity_symbol: 1213482248,
+       is_buy: 1,
+       traded_currency: 0,
+       traded_commodity: 0,
+       price: 3.4031e-10,
+       pending_commodity: 10.95,
+       status: 4,
+       timestamp: '1539156729557237062' }, {...} ], more: false }
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret =  await  api_cxp.getUserOrders('sim',log, host='http://testnet-bpb.coinxp.io:8888' )</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getWithdraws%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E7%9A%84%E6%8F%90%E5%B8%81%E8%AE%B0%E5%BD%95"><span class="type-signature"></span>getWithdraws 获取用户的提币记录<span class="signature">(coinName, startid, callback, host)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>coinName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">币种  比如 ETH</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>startid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">充值记录起始位置</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">回调函数</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line891">line 891</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    ret: { rows:
+   [ { id: 0,
+       reqid: 69242155,
+       user: 'cxpkrvjtw',
+       to: '2N24Um3rWrzY8wKc6kKD1ouU8AmtUkx5ake',
+       quantity: '0.01000000 BTC',
+       txhash: '63b2febff02cd79c32000edd69045b3bb63d1aad850fd29433895dd900f21d2d',
+       status: 2,
+       executor: 'bpc',
+       blocknum: 111065,
+       timestamp: '1539227796698374882',
+       validators: [Array],
+       rejecters: [] },    {...} ], more: false }
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret = await api_cxp.getWithdraws('BTC', 0,  log,  host='http://testnet-bpb.coinxp.io:8888') </code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="queryBlance%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E9%93%B6%E8%A1%8C%E8%B5%84%E4%BA%A7%E4%BD%99%E9%A2%9D"><span class="type-signature"></span>queryBlance 查询用户银行资产余额<span class="signature">(name, bankName, host)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP用户名</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bankName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">银行名称： coinxp.bank</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址， 可选项</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line130">line 130</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    { coins:
+   [ { balance: 8000, locked: 0, type: 'BTC' },
+     { balance: 8002, locked: 0, type: 'ETH' },
+     { balance: 0, locked: 0, type: 'ZIL' } ]}
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret = await api_cxp.queryBlance(name, 'coinxp.bank', host='http://testnet-bpb.coinxp.io:8888'  )</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="queryBlanceExchange%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E5%9C%A8%E4%BA%A4%E6%98%93%E6%89%80%E8%B5%84%E4%BA%A7"><span class="type-signature"></span>queryBlanceExchange  查询用户在交易所资产<span class="signature">(name, exchangeName, host)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP用户名</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>exchangeName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">数字资产交易所名称 exchange1</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line170">line 170</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    { coins:
+   [ { balance: 8000, locked: 0, type: 'BTC' },
+     { balance: 8002, locked: 0, type: 'ETH' },
+     { balance: 0, locked: 0, type: 'ZIL' } ]}
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret = await api_cxp.queryBlanceExchange(name, 'exchange1'  )</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="queryCoinAddr%E6%9F%A5%E8%AF%A2%E5%B8%81%E5%9C%B0%E5%9D%80"><span class="type-signature"></span>queryCoinAddr 查询币地址<span class="signature">(name, cointype, host)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP用户名</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cointype</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">币种类 ， 比如 ETH</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line254">line 254</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    例：2MsU9fMAfwyy6tsVAC2wNzCGrSSbibz7y9j
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret = await api_cxp.queryCoinAddr(newUser, 'BTC',host='http://testnet-bpb.coinxp.io:8888' ); </code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="queryLastPrice%E6%9F%A5%E8%AF%A2%E4%BA%A4%E6%98%93%E5%AF%B9%E6%9C%80%E6%96%B0%E4%BB%B7"><span class="type-signature"></span>queryLastPrice 查询交易对最新价<span class="signature">(cointype, host)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>cointype</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">币种类 ， 比如 ETH</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line291">line 291</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    { request_id: 79596882,
+  amount: 10.27,
+  price: '0.03131400000000000',
+  timestamp: '1540508017936875865' }
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret = await api_cxp.queryLastPrice('eth/btc')</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="reqwithdraw%E7%94%A8%E6%88%B7%E6%8F%90%E5%B8%81"><span class="type-signature"></span>reqwithdraw 用户提币<span class="signature">(name, reqid, addr, amount, type, priKey, host)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP用户名</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>reqid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">请求ID，  调用方定义， 8位唯一</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>addr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">提币地址， 用户所要提出的币地址</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>amount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">数量</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">币种类，比如 ETH</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>priKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">用户私钥</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line331">line 331</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    { broadcast: true, ..... }
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret = await api_cxp.reqwithdraw(newUser, 1233212, '2N49rrbPiqBe67f9eoCnkcgNQPAVketz2oM', '0.01000000', 'BTC',  PriKey )</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="sell%E5%8D%96%E5%87%BA%E9%99%90%E4%BB%B7%E5%A7%94%E6%89%98"><span class="type-signature"></span>sell 卖出限价委托<span class="signature">(contractName, name, price, amount, orderId, priKey, exchangeName, host)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>contractName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">交易对</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP用户名</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>price</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">价格</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>amount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">数量</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>orderId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">委托编号， 调用方定义，全局唯一  10位数字</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>priKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">私钥</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>exchangeName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">交易所编号</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>host</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CXP链地址</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cxpAPI.js.html">cxpAPI.js</a>, <a href="cxpAPI.js.html#line557">line 557</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    { broadcast: true, ..... }
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ret = await api_cxp.sell( 'CXP/BTC', 'sim', 1.2 , 11, 777705,  '5KiTgpHdj3QZQmHtefRJDR5nnProKnBPt2icZBKkLF2vWqSTQez', 'exchange1', host='http://testnet-bpb.coinxp.io:8888'  )</code></pre>
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#bank2change%25E9%2593%25B6%25E8%25A1%258C%25E4%25B8%25AA%25E4%25BA%25BA%25E8%25B5%2584%25E4%25BA%25A7%25E8%25BD%25AC%25E4%25BA%25A4%25E6%2598%2593%25E6%2589%2580">bank2change 银行个人资产转交易所</a></li><li><a href="global.html#buy%25E4%25B9%25B0%25E5%2585%25A5%25E9%2599%2590%25E4%25BB%25B7%25E5%25A7%2594%25E6%2589%2598">buy 买入限价委托</a></li><li><a href="global.html#cancel%25E5%25A7%2594%25E6%2589%2598%25E6%2592%25A4%25E9%2594%2580">cancel 委托撤销</a></li><li><a href="global.html#change2bank%25E4%25BA%25A4%25E6%2598%2593%25E6%2589%2580%25E4%25B8%25AA%25E4%25BA%25BA%25E8%25B5%2584%25E4%25BA%25A7%25E8%25BD%25AC%25E9%2593%25B6%25E8%25A1%258C">change2bank 交易所个人资产转银行</a></li><li><a href="global.html#createAccount%25E5%2588%259B%25E5%25BB%25BACXP%25E7%2594%25A8%25E6%2588%25B7">createAccount 创建CXP用户</a></li><li><a href="global.html#genKeys%25E7%2594%259F%25E6%2588%2590%25E5%25AF%2586%25E9%2592%25A5%25E5%25AF%25B9">genKeys  生成密钥对</a></li><li><a href="global.html#getDeposits%25E8%258E%25B7%25E5%258F%2596%25E7%2594%25A8%25E6%2588%25B7%25E7%259A%2584%25E5%2585%2585%25E5%25B8%2581%25E8%25AE%25B0%25E5%25BD%2595">getDeposits 获取用户的充币记录</a></li><li><a href="global.html#getOrderbookbuy%25E8%258E%25B7%25E5%258F%2596%25E4%25BA%25A4%25E6%2598%2593%25E5%25AF%25B9%25E7%259A%2584%25E5%25A7%2594%25E4%25B9%25B010%25E6%25A1%25A3%25E8%25A1%258C%25E6%2583%2585">getOrderbookbuy 获取交易对的委买 10 档行情</a></li><li><a href="global.html#getOrderbooksell%25E8%258E%25B7%25E5%258F%2596%25E4%25BA%25A4%25E6%2598%2593%25E5%25AF%25B9%25E7%259A%2584%25E5%25A7%2594%25E5%258D%2596%25E8%25A1%258C%25E6%2583%2585%25EF%25BC%258C10%25E6%25A1%25A3">getOrderbooksell 获取交易对的委卖行情，10档</a></li><li><a href="global.html#getUserOrders%25E8%258E%25B7%25E5%258F%2596%25E7%2594%25A8%25E6%2588%25B7%25E7%259A%2584%25E6%2588%2590%25E4%25BA%25A4%25E8%25AE%25B0%25E5%25BD%2595">getUserOrders 获取用户的成交记录</a></li><li><a href="global.html#getWithdraws%25E8%258E%25B7%25E5%258F%2596%25E7%2594%25A8%25E6%2588%25B7%25E7%259A%2584%25E6%258F%2590%25E5%25B8%2581%25E8%25AE%25B0%25E5%25BD%2595">getWithdraws 获取用户的提币记录</a></li><li><a href="global.html#queryBlance%25E6%259F%25A5%25E8%25AF%25A2%25E7%2594%25A8%25E6%2588%25B7%25E9%2593%25B6%25E8%25A1%258C%25E8%25B5%2584%25E4%25BA%25A7%25E4%25BD%2599%25E9%25A2%259D">queryBlance 查询用户银行资产余额</a></li><li><a href="global.html#queryBlanceExchange%25E6%259F%25A5%25E8%25AF%25A2%25E7%2594%25A8%25E6%2588%25B7%25E5%259C%25A8%25E4%25BA%25A4%25E6%2598%2593%25E6%2589%2580%25E8%25B5%2584%25E4%25BA%25A7">queryBlanceExchange  查询用户在交易所资产</a></li><li><a href="global.html#queryCoinAddr%25E6%259F%25A5%25E8%25AF%25A2%25E5%25B8%2581%25E5%259C%25B0%25E5%259D%2580">queryCoinAddr 查询币地址</a></li><li><a href="global.html#queryLastPrice%25E6%259F%25A5%25E8%25AF%25A2%25E4%25BA%25A4%25E6%2598%2593%25E5%25AF%25B9%25E6%259C%2580%25E6%2596%25B0%25E4%25BB%25B7">queryLastPrice 查询交易对最新价</a></li><li><a href="global.html#reqwithdraw%25E7%2594%25A8%25E6%2588%25B7%25E6%258F%2590%25E5%25B8%2581">reqwithdraw 用户提币</a></li><li><a href="global.html#sell%25E5%258D%2596%25E5%2587%25BA%25E9%2599%2590%25E4%25BB%25B7%25E5%25A7%2594%25E6%2589%2598">sell 卖出限价委托</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Oct 29 2018 10:53:21 GMT+0800 (中国标准时间)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

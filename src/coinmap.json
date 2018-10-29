@@ -1,0 +1,26 @@
+{ "maps":[
+{"coinname":"CXP", "cointype":"ETH"},
+{"coinname":"VEN", "cointype":"ETH"},
+{"coinname":"BNB", "cointype":"ETH"},
+{"coinname":"OMG", "cointype":"ETH"},
+{"coinname":"MKR", "cointype":"ETH"},
+{"coinname":"ZRX", "cointype":"ETH"},
+{"coinname":"ZIL", "cointype":"ETH"},
+{"coinname":"ICX", "cointype":"ETH"},
+{"coinname":"AE", "cointype":"ETH"},
+{"coinname":"NPXS", "cointype":"ETH"},
+{"coinname":"BTM", "cointype":"ETH"},
+{"coinname":"BAT", "cointype":"ETH"},
+{"coinname":"HOT", "cointype":"ETH"},
+{"coinname":"GNT", "cointype":"ETH"},
+{"coinname":"SNT", "cointype":"ETH"},
+{"coinname":"REP", "cointype":"ETH"},
+{"coinname":"WTC", "cointype":"ETH"},
+{"coinname":"PPT", "cointype":"ETH"},
+{"coinname":"LINK", "cointype":"ETH"},
+{"coinname":"EOS", "cointype":"ETH"}
+]  }
+
+
+
+ 
