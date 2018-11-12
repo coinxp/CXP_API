@@ -22,7 +22,7 @@ CXP API 访问CXP公有链的一组接口。
 ### 快速开始
 
 ```sh
-$ git clone https://github.com/rehylas/cxpAPI.git
+$ git clone https://github.com/coinxp/CXP_API.git
 $ npm i 
 $ node src/cxpAPI.test.js
 ```
