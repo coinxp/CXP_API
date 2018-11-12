@@ -27,7 +27,7 @@ const test = async () => {
         let ret = ''
  
         // 用户相关接口                     
-        ret = await api_cxp.createAccount(newUser, PriKey, PubKey, PubKey, host='http://testnet-bpb.coinxp.io:8888'  )
+        // ret = await api_cxp.createAccount(newUser, PriKey, PubKey, PubKey, host='http://testnet-bpb.coinxp.io:8888'  )
         // ret = await api_cxp.queryBlance(name, 'coinxp.bank', host='http://testnet-bpb.coinxp.io:8888'  )
         // console.log( ret )
         // ret = await api_cxp.queryCoinAddr(newUser,'BTC', host='http://testnet-bpb.coinxp.io:8888'  )
@@ -78,7 +78,10 @@ const test = async () => {
 
 
         //其它接口
-        ret = await api_cxp.genKeys()
+        //ret = await api_cxp.genKeys()
+
+        ret =  await  api_cxp.getCoins( log, host='http://testnet-bpb.coinxp.io:8888' )
+        //ret =  await  api_cxp.getTradepair( log,host='http://testnet-bpb.coinxp.io:8888' )
 
         console.log('ret:', ret )
 
