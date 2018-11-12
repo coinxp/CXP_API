@@ -788,7 +788,7 @@ const getOrderbooksell = async (contractName, host = null) => {
  
 
 /**
- * @function getCoins 获取用户的成交记录
+ * @function getCoins 获取支持的币种
  * @param {string} callback  回调函数
  * @param {string} host CXP链地址
  * @returns {object} { rows:       
@@ -829,7 +829,7 @@ const getCoins = async (  callback, host = null) => {
 }
 
 /**
- * @function getTradepair 获取用户的成交记录
+ * @function getTradepair 获取支持的交易对
  * @param {string} callback  回调函数
  * @param {string} host CXP链地址
  * @returns {object} { rows:       
