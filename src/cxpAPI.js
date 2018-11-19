@@ -910,7 +910,7 @@ const getUserOrders = async (name, callback, host = null) => {
     let config = getConfig(host)
     const eos = Eos(config);
 
-    //cleos get table cxp.odb wm ord8erdb
+    //cleos get table cxp.odb wm orderdb
     let orders = { 'rows': [] }
 
     try {
@@ -930,6 +930,70 @@ const getUserOrders = async (name, callback, host = null) => {
         callback(e, '')
         //throw new Error(e);
     }
+}
+
+//内部函数
+const getUserOrders_withStartRequestid = async (name, Requestid, host = null) => {
+    let config = getConfig(host)
+    const eos = Eos(config);
+
+    //cleos get table cxp.odb wm orderdb
+    let orders = { 'rows': [], "more": false }
+
+    try {
+ 
+        const res = await eos.getTableRows({
+            "scope": name, "code": "cxp.odb", "table": "orderdb",
+            "lower_bound": Requestid, "json": true, "limit": 100
+        });
+
+        orders.rows = res.rows
+        orders.more = res.more
+  
+        //console.log('getUserOrders_withStartRequestid ', Requestid,  res.rows.length )
+      
+        return orders;
+    } catch (e) {
+        orders = { 'rows': [], "more": false }
+        return orders
+        //throw new Error(e);
+    }
+}
+
+const getUserOrdersEx = async (name, callback, host = null) => {
+    //cleos get table cxp.odb wm orderdb
+    let orders = { 'rows': [], "more": false }
+    let Requestid = 0
+
+    subOrders = await getUserOrders_withStartRequestid(name, Requestid, host = host)
+    orders.rows = subOrders.rows;
+    if( subOrders.more == false ){ // 总共就100条数据
+        orders.rows = subOrders.rows;
+        orders.rows = standTrade(sortUserTrade(subOrders.rows))
+        callback('', orders)
+        return orders;
+    }
+
+    while( true ){
+        //console.log('',subOrders.rows  )
+        let lastrec = subOrders.rows[ subOrders.rows.length-1]
+        Requestid = lastrec.request_id
+        subOrders = await getUserOrders_withStartRequestid(name, Requestid, host = host)
+        if( subOrders.rows.length <=0 ){
+            callback('', orders)
+            return orders;               
+        }
+
+        subOrders.rows = subOrders.rows.splice(0,1)   //第一条重复，清楚掉
+        orders.rows = orders.rows.concat( subOrders.rows );
+        if( subOrders.more == false ){
+            orders.rows = standTrade(sortUserTrade(orders.rows))
+            callback('', orders)
+            return orders;            
+            break
+        }
+    }
+
 }
 
 
@@ -1286,4 +1350,6 @@ module.exports.getTradepair = getTradepair;
 module.exports.bank2change = bank2change;
 module.exports.change2bank = change2bank;
 module.exports.genKeys = genKeys;
+
+module.exports.getUserOrdersEx = getUserOrdersEx;
 
