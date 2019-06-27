@@ -79,6 +79,14 @@ module.exports.queryLastPrice = queryLastPrice;
 module.exports.getUserOrders = getUserOrders;
 
 module.exports.genKeys = genKeys;
+
+module.exports.buyDt = buyDt;
+module.exports.donate = donate;
+module.exports.confdonation = confdonation;
+module.exports.award = award;
+module.exports.awardfrompool = awardfrompool;
+module.exports.queryDtdt = queryDtdt;
+
 ```
 接口说明
 ----

@@ -1326,6 +1326,261 @@ a = a.sort((v, w) => {
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
+//hub
+
+/**
+ * @function buyDt 购买Dt
+ * @param {string} userAcc  CXP区块链 账户  
+ * @param {number} vol   数量，整数
+ * @param {string} userKey 用户密钥 active 
+ * @returns @returns  {Object} { broadcast: true, ..... }  
+ * @example
+ * ret = await api_cxp.buyDt('abcd', 1000, '5JFduBWtcggNQLTZMYY9wBJPqHn9C6WkSWnhdbwP37LA24KCpiV') 
+ */
+const buyDt = async (userAcc, vol, userKey ) => {
+    try {
+        let priKey = userKey||TEST_KEY;
+        logger.debug("key", priKey);
+        const eos = getEosClientWithKey(priKey);
+        const exchangeAccount = 'hub.exchange';
+        const account = userAcc;
+        const dtvalue = vol + ' DT'  ;
+        const actName = 'buydt'
+ 
+        logger.debug('-----------------------------------');
+        const res = await eos.transaction({
+            actions: [
+                {
+                    account: exchangeAccount,
+                    name: actName,
+                    authorization: [{
+                        actor: account,
+                        permission: 'active'
+                    }],
+                    data: {  
+                        owner: account,
+                        dtvalue :dtvalue
+                    }
+                }
+            ]
+        });
+        logger.info('eosAPI buyDt res ....', res);
+        return res;
+    } catch (e) {
+        logger.error('eosAPI - bubuyDty error: ', e);
+        throw new Error('eosAPI - buyDt error: ' % e);
+    }
+};
+
+
+
+
+
+/**
+ * @function donate 捐献
+ * @param {string} userAcc  CXP区块链 账户  
+ * @param {number} vol   数量，整数，  比如 100.00000000 HUB 或者 100 DT
+ * @param {string} userKey 用户密钥 active 
+ * @returns @returns  {Object} { broadcast: true, ..... }  
+ * @example
+ * ret = await api_cxp.donate('abcd', 1000, '5JFduBWtcggNQLTZMYY9wBJPqHn9C6WkSWnhdbwP37LA24KCpiV') 
+ */
+const donate = async ( userAcc, val , userKey  ) => {
+    try {
+        
+        let priKey = userKey||TEST_KEY;
+        const eos = getEosClientWithKey(priKey);
+        const exchangeAccount = 'hub.exchange';
+        const account = userAcc;
+        const dtvalue = val;
+        const actName = 'donate'
+ 
+        logger.debug('donate : -----------------------------------');
+        const res = await eos.transaction({
+            actions: [
+                {
+                    account: exchangeAccount,
+                    name: actName,
+                    authorization: [{
+                        actor: account,
+                        permission: 'active'
+                    }],
+                    data: {  
+                        owner: account,
+                        value : dtvalue  
+                      
+                    }
+                }
+            ]
+        });
+        logger.info('eosAPI   res ....', res);
+        return res;
+    } catch (e) {
+        logger.error('eosAPI -   error: ', e);
+        throw new Error('eosAPI -   error: ' % e);
+    }
+};
+
+ 
+
+/**
+ * @function confdonation 捐献确认， 在 donate 调用之后1秒内调用
+ * @param {string} userAcc  CXP区块链 账户  
+ * @param {number} vol   数量，整数，  比如 100.00000000 HUB 或者 100 DT
+ * @returns @returns  {Object} { broadcast: true, ..... }  
+ * @example
+ * ret = await api_cxp.confdonation('abcd', 1000,  ) 
+ */
+const confdonation = async ( userAcc, val ) => {
+    try {
+        
+        const exchangeAccount = 'hub.exchange';
+        const eos = await getEosClientWithAccount(exchangeAccount);
+        const account = userAcc;
+        const dtvalue = val;
+        const actName = 'confdonation'
+ 
+        logger.debug('confdonation : -----------------------------------', val);
+        const res = await eos.transaction({
+            actions: [
+                {
+                    account: exchangeAccount,
+                    name: actName,
+                    authorization: [{
+                        actor: exchangeAccount,
+                        permission: 'active'
+                    }],
+                    data: {    // {"owner": "alice", "value": "500 DT"},
+                        owner: account,
+                        value : dtvalue  
+                      
+                    }
+                }
+            ]
+        });
+        logger.info('eosAPI   res ....', res);
+        return res;
+    } catch (e) {
+        logger.error('eosAPI -   error: ', e);
+        throw new Error('eosAPI -   error: ' % e);
+    }
+};
+
+
+
+/**
+ * @function award 奖励 
+ * @param {string} userAcc  CXP区块链 账户  
+ * @param {number} vol   数量，整数，  比如 100.00000000   
+ * @returns @returns  {Object} { broadcast: true, ..... }  
+ * @example
+ * ret = await api_cxp.award('abcd', 1000  ) 
+ */
+const award = async ( userAcc, val   ) => {
+    try {
+        const exchangeAccount = 'hub.exchange';
+        const eos = await getEosClientWithAccount(exchangeAccount);
+        const account = userAcc;
+        const hubvalue = Number(val).toFixed(8) + ' HUB'  ;
+        const actName = 'award'
+ 
+        logger.debug('award : -----------------------------------');
+        const res = await eos.transaction({
+            actions: [
+                {
+                    account: exchangeAccount,
+                    name: actName,
+                    authorization: [{
+                        actor: exchangeAccount,
+                        permission: 'active'
+                    }],
+                    data: {    //{"owner": "alice", "value": "500.00000000 HUB"},
+                        owner: account,
+                        value : hubvalue  
+                      
+                    }
+                }
+            ]
+        });
+        logger.info('eosAPI   res ....', res);
+        return res;
+    } catch (e) {
+        logger.error('eosAPI -   error: ', e);
+        throw new Error('eosAPI -   error: ' % e);
+    }
+};
+
+
+
+//
+/**
+ * @function awardfrompool 奖池奖励 
+ * @param {string} userAcc  CXP区块链 账户  
+ * @param {number} vol   数量，整数，  比如 100.00000000   
+ * @returns @returns  {Object} { broadcast: true, ..... }  
+ * @example
+ * ret = await api_cxp.award('abcd', 1000  ) 
+ */
+const awardfrompool = async ( userAcc, val   ) => {
+    try {
+        const exchangeAccount = 'hub.exchange';
+        const eos = await getEosClientWithAccount(exchangeAccount);
+        const account = userAcc;
+        const hubvalue = Number(val).toFixed(8) + ' HUB'  ;
+        const actName = 'awardfrompol'
+ 
+        logger.debug('awardfrompool : -----------------------------------');
+        const res = await eos.transaction({
+            actions: [
+                {
+                    account: exchangeAccount,
+                    name: actName,
+                    authorization: [{
+                        actor: exchangeAccount,
+                        permission: 'active'
+                    }],
+                    data: {    //{"owner": "alice", "value": "500.00000000 HUB"},
+                        owner: account,
+                        value : hubvalue  
+                      
+                    }
+                }
+            ]
+        });
+        logger.info('eosAPI   res ....', res);
+        return res;
+    } catch (e) {
+        logger.error('eosAPI -   error: ', e);
+        throw new Error('eosAPI -   error: ' % e);
+    }
+};
+
+
+/**
+ * @function queryDtdt 查询dt情况 
+ * @returns @returns  {Object}  { rows: [ [Object], [Object], [Object] ], more: false }
+ * @example
+ * ret = await api_cxp.queryDtdt(  ) 
+ */
+const queryDtdt = async () => {
+    // return { rows: [ [Object], [Object], [Object] ], more: false }
+    try {
+        const eos = getEosClientWithNoKey( );
+        const res = await eos.getTableRows({
+            "scope": "dt", "code": "hub.exchange", "table": "dt","json": true 
+        });
+        console.log('dt', res);
+        delete res.more;
+        return res;   //{ rows: [ [Object], [Object], [Object] ], more: false }
+    } catch (e) {
+        console.log(e);
+        return { rows:[] } ;
+    }
+};
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
 //exports：
 
 module.exports.createAccount = createAccount;
@@ -1353,3 +1608,10 @@ module.exports.genKeys = genKeys;
 
 module.exports.getUserOrdersEx = getUserOrdersEx;
 
+//hub
+module.exports.buyDt = buyDt;
+module.exports.donate = donate;
+module.exports.confdonation = confdonation;
+module.exports.award = award;
+module.exports.awardfrompool = awardfrompool;
+module.exports.queryDtdt = queryDtdt;
